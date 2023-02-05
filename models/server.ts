@@ -3,11 +3,12 @@ import cors from 'cors';
 import db from '../database/db';
 import userRouter from '../routes/users.routes';
 import transferRouter from '../routes/transfers.routes';
+import { Patch } from '../interfaces/types';
 
 class Server {
   private app: Application;
   private PORT: string = process.env.PORT || '4003';
-  private patch = {
+  private patch:Patch = {
     users: '/api/v1/users',
     transfer: '/api/v1/transfer',
   };

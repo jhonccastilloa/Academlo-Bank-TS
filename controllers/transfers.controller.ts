@@ -6,7 +6,7 @@ const transferAmount = async (req: Request, res: Response) => {
   try {
     const { amount, senderUserId, reciverUserId } = req.body;
 
-    if (senderUserId == reciverUserId)
+    if (senderUserId === reciverUserId)
       return res.status(404).json({
         status: 'error',
         message: 'you can not transfer yourself',

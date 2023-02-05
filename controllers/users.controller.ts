@@ -39,7 +39,7 @@ const login = async (req: Request, res: Response) => {
         status: 'error',
         message: 'you need an account to Log in',
       });
-    if (user?.password != password)
+    if (user.password !== password)
       return res.status(404).json({
         status: 'error',
         message: 'Incorrect password',
@@ -80,7 +80,7 @@ const historyTransfer = async (req: Request, res: Response) => {
     if (transfer.length === 0)
       return res.status(404).json({
         status: 'error',
-        message: 'The user has no transfers',
+        message: 'The user has not transfers',
       });
     res.json({
       status: 'success',

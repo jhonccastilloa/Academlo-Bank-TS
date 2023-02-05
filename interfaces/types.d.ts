@@ -5,6 +5,11 @@ import {
   Model,
 } from 'sequelize';
 
+export interface Patch {
+  users: string;
+  transfer: string;
+}
+
 export interface UserModelProps
   extends Model<
     InferAttributes<UserModelProps>,
